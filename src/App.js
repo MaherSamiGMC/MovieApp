@@ -3,6 +3,7 @@ import MovieList from './Components/MovieList'
 import {useState} from "react"
 import AddForm from './Components/AddForm';
 import Moviedb from './Components/Moviedb'
+import ReactStars from "react-rating-stars-component";
 
 
 function App() {
@@ -15,9 +16,12 @@ function App() {
   const [rating,setRating]= useState("");
   const [popUp,setPopUp]=useState(false)
 
-  
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  }
   
   return (
+    
     <>
     <div className="searchBar">
     {/*add button*/}
@@ -46,7 +50,14 @@ function App() {
   </div>
 
   <div className="search">
-  <input type="text" placeholder="Search by rating" onChange={event => setRating(event.target.value)} />
+  <ReactStars
+   className="ratingStars"
+    count={5}
+    onChange={(newValue) => setRating(newValue)}
+    size={24}
+    activeColor="#ffd700"
+  />
+  {/* <input type="text" placeholder="Search by rating" onChange={event => setRating(event.target.value)} />
 
     <div className="symbol">
 
@@ -56,7 +67,7 @@ function App() {
       <svg className="lens">
         <use xlinkHref="#lens" />
       </svg>
-    </div>
+    </div> */}
 
 
   </div>
