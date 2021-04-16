@@ -11,6 +11,7 @@ const AddForm = (props) => {
     const [moviedata,setMoviedata]=useState({title:"",
         subtitle:"",
         description:"",
+        image_1:"",
         image_2:"",
         rating:"",})
     return ( (props.trigger) ?
@@ -30,7 +31,7 @@ const AddForm = (props) => {
         <label>Movie description</label>
       </div>
       <div className="user-box">
-        <input onChange={e=>setMoviedata({...moviedata,image_2:<img src={e.target.value} alt="cover" className="cover"/>})} type="text" Cover required />
+        <input onChange={e=>setMoviedata({...moviedata,image_1:e.target.value,image_2:<img src={e.target.value} alt="cover" className="cover"/>})} type="text" Cover required />
         <label>Movie Cover</label>
       </div>
       <div className="user-box">
