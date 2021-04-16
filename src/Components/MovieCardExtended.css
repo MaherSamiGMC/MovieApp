@@ -21,7 +21,7 @@
  .container1111 {
 	 margin: 0 auto;
 	 width: 780px;
-	 height: 640px;
+	 height: 900px;
 	 background: #f0f0ed;
 	 border-radius: 5px;
 	 position: relative;
@@ -363,4 +363,8 @@ a img{
 }
 .searchBar .socials > a:hover {
     --scale: 1;
+}
+.iframe{
+	display: flex;
+	justify-content: center;
 }

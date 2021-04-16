@@ -59,8 +59,13 @@ const MovieCardExtended=(props)=>{
       <div className="column21">
         <p>{props.movie.description}</p>
       </div> {/* end column2 */}
+      
     </div> {/* end description */}
+    <div className="iframe">
+  <iframe width="560" height="315" src={props.movie.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
   </div> {/* end container */}
+  
 </div> {/* end movie-card */}
 </>
 
